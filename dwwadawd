@@ -1,0 +1,23 @@
+count_character = 0
+a_to_z = "abcdefghijklmnopqrstuvwxyz"
+collect =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+count_sentense = 0
+stop = 0
+while stop == 0:
+    word = input("put your word here: ")
+    count_character = count_character + len(word)
+    for X in word:
+        for Y in range(len(a_to_z)):
+            if word == "END":
+                stop = stop +1
+                break
+            elif X == (a_to_z[Y]):
+                collect[Y] +=1
+            elif X == ".":
+                 count_sentense +=1   
+print ("___"*27)
+print ("|","[a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]", "|")
+print ("|",(collect),"|")               
+print ("|","Total of count_character:","  ",count_character-3,"  "*23,"","|")
+print ("|","Total of count_sentense:","  ",count_sentense,"  "*24,"|")
+print ("___"*27)
